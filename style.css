@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #66C7D0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 350px;
+    width: 380px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .2s;
+}
+
+.container .title {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.captcha-box {
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.captcha-box img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.container .message {
+    display: none;
+    position: relative;
+    top: 120px;
+    left: 20px;
+}
+
+.container input {
+    all: unset;
+    height: 35px;
+    width: 190px;
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    position: relative;
+    top: 90px;
+    left: 90px;
+}
+
+.captcha-box .captcha {
+    position: absolute;
+    font-size: 25px;
+    color: #353935;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: line-through;
+}
+
+.container .check-btn, .container .generate-btn{
+    all: unset;
+    height: 30px;
+    width: 110px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transition: all .2s;
+    background: #66C7D0;
+    color: black;
+}
+
+.container .generate-btn {
+    width: 160px;
+    top: 88%;
+}
+.user-input.input-shaked{
+    animation:shake .2s ease-in-out ;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }20%{
+        transform: translateX(-13px);
+    }40%{
+        transform: translateX(13px);
+    }60%{
+        transform: translateX(-8px);
+    }80%{
+        transform: translateX(8px);
+    }
+}
